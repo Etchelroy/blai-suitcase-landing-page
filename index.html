@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUNA Luggage — Travel Without Limits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- STICKY NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">LUNA</a>
+      <ul class="nav__links">
+        <li><a href="#products">Collection</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#cta" class="nav__cta-link">Shop Now</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#products">Collection</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#cta">Shop Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80" alt="Mountain landscape" class="hero__bg-img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">The New Standard in Travel</p>
+      <h1 class="hero__headline">Journey<br /><em>Without</em><br />Limits.</h1>
+      <p class="hero__sub">Premium hardshell luggage engineered for the modern explorer. Crafted from aerospace-grade polycarbonate. Built for a lifetime.</p>
+      <div class="hero__actions">
+        <a href="#products" class="btn btn--gold">Explore Collection</a>
+        <a href="#features" class="btn btn--ghost">Discover Features</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Free Global Shipping</span><span class="dot">✦</span>
+      <span>Lifetime Warranty</span><span class="dot">✦</span>
+      <span>TSA-Approved Locks</span><span class="dot">✦</span>
+      <span>360° Spinner Wheels</span><span class="dot">✦</span>
+      <span>USB-C Charging Port</span><span class="dot">✦</span>
+      <span>Free Global Shipping</span><span class="dot">✦</span>
+      <span>Lifetime Warranty</span><span class="dot">✦</span>
+      <span>TSA-Approved Locks</span><span class="dot">✦</span>
+      <span>360° Spinner Wheels</span><span class="dot">✦</span>
+      <span>USB-C Charging Port</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Collection</p>
+        <h2 class="section-title">Designed for Every Journey</h2>
+        <p class="section-sub">Four silhouettes. One philosophy: never compromise.</p>
+      </div>
+      <div class="products__grid">
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80" alt="Cabin Case" />
+            <div class="product-card__badge">Bestseller</div>
+            <div class="product-card__overlay">
+              <a href="#cta" class="btn btn--gold btn--sm">Shop Now</a>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__tag">Carry-On · 20"</div>
+            <h3 class="product-card__name">The Cabin</h3>
+            <p class="product-card__desc">Perfect for weekend escapes. Fits all major overhead bins. Weighs just 3.2 kg.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$295</span>
+              <div class="product-card__colors">
+                <span class="swatch swatch--slate" title="Slate"></span>
+                <span class="swatch swatch--sand" title="Sand"></span>
+                <span class="swatch swatch--midnight" title="Midnight"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=600&q=80" alt="Check-In Case" />
+            <div class="product-card__badge product-card__badge--teal">New</div>
+            <div class="product-card__overlay">
+              <a href="#cta" class="btn btn--gold btn--sm">Shop Now</a>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__tag">Check-In · 24"</div>
+            <h3 class="product-card__name">The Explorer</h3>
+            <p class="product-card__desc">Week-long adventures call for thoughtful organisation. Double-zip expandable main compartment.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$365</span>
+              <div class="product-card__colors">
+                <span class="swatch swatch--slate" title="Slate"></span>
+                <span class="swatch swatch--forest" title="Forest"></span>
+                <span class="swatch swatch--blush" title="Blush"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1581553673739-c4906b5d0de8?w=600&q=80" alt="Large Check-In" />
+            <div class="product-card__overlay">
+              <a href="#cta" class="btn btn--gold btn--sm">Shop Now</a>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__tag">Large · 28"</div>
+            <h3 class="product-card__name">The Voyager</h3>
+            <p class="product-card__desc">For the long haul. Maximum capacity with our patented FlexPack™ compression system.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$425</span>
+              <div class="product-card__colors">
+                <span class="swatch swatch--midnight" title="Midnight"></span>
+                <span class="swatch swatch--sand" title="Sand"></span>
+                <span class="swatch swatch--forest" title="Forest"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80" alt="Set Bundle" />
+            <div class="product-card__badge product-card__badge--gold">Save 20%</div>
+            <div class="product-card__overlay">
+              <a href="#cta" class="btn btn--gold btn--sm">Shop Now</a>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__tag">Bundle · 3-Piece Set</div>
+            <h3 class="product-card__name">The Full Set</h3>
+            <p class="product-card__desc">The complete LUNA experience. Cabin + Explorer + Voyager in perfectly matched colourways.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$875 <del>$1,085</del></span>
+              <div class="product-card__colors">
+                <span class="swatch swatch--slate" title="Slate"></span>
+                <span class="swatch swatch--midnight" title="Midnight"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT FEATURE HIGHLIGHT -->
+  <section class="split-feature">
+    <div class="split-feature__img">
+      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1000&q=80" alt="Plane window travel" />
+    </div>
+    <div class="split-feature__text">
+      <p class="section-eyebrow section-eyebrow--light">The LUNA Promise</p>
+      <h2 class="split-feature__title">Built to outlast every adventure.</h2>
+      <p class="split-feature__body">Every LUNA case undergoes 200+ hours of stress testing — dropped, dragged, overpacked, and rained on — before it ever reaches your hands. Our aerospace-grade polycarbonate shell flexes on impact and springs back perfectly, every time.</p>
+      <ul class="split-feature__list">
+        <li><span class="check-icon">✓</span> Lifetime repair or replace guarantee</li>
+        <li><span class="check-icon">✓</span> 200+ hours of quality testing</li>
+        <li><span class="check-icon">✓</span> Waterproof zipper seals</li>
+        <li><span class="check-icon">✓</span> Impact-flex polycarbonate shell</li>
+      </ul>
+      <a href="#cta" class="btn btn--gold">Start Your Journey</a>
+    </div>
+  </section>
+
+  <!-- FEATURES GRID -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Why LUNA</p>
+        <h2 class="section-title">Every Detail, Considered.</h2>
+        <p class="section-sub">Six innovations that make LUNA the last luggage you'll ever need to buy.</p>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-block" data-aos="fade-up">
+          <div class="feature-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Aerospace Shell</h3>
+          <p>German-engineered polycarbonate that flexes under pressure and returns to perfect shape — lighter than aluminium, tougher than ABS.</p>
+        </div>
+
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="80">
+          <div class="feature-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>360° Silent Glide Wheels</h3>
+          <p>Japanese-precision ball-bearing wheels that spin silently on any surface — marble airport floors, cobblestones, or carpet.</p>
+        </div>
+
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="160">
+          <div class="feature-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+          </div>
+          <h3>TSA-Approved Lock</h3>
+          <p>Integrated 3-dial combination lock meets TSA standards globally. Never fuss with luggage straps or padlocks again.</p>
+        </div>
+
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="240">
+          <div class="feature-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>USB-C Charging</h3>
+          <p>Built-in 10,000mAh removable power bank keeps your devices alive through the longest layovers. Charges two devices simultaneously.</p>
+        </div>
+
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="320">
+          <div class="feature-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>FlexPack™ Interior</h3>
+          <p>Compression straps, garment divider, and hidden laundry pouch. Pack 30% more with intelligent organisation, not more space.</p>
+        </div>
+
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Lifetime Warranty</h3>
+          <p>We stand behind every rivet and zipper. If anything breaks — ever — we fix or replace it, no questions asked, anywhere in the world.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container stats-bar__inner">
+      <div class="stat">
+        <span class="stat__num" data-target="250000">0</span><span class="stat__suffix">+</span>
+        <p>Travellers worldwide</p>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num" data-target="186">0</span><span class="stat__suffix"></span>
+        <p>Countries reached</p>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num" data-target="98">0</span><span class="stat__suffix">%</span>
+        <p>5-star reviews</p>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num" data-target="12">0</span><span class="stat__suffix"> yrs</span>
+        <p>Average LUNA lifespan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Real Travellers</p>
+        <h2 class="section-title">Trusted at 30,000 Feet.</h2>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card" data-aos="fade-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>"I've been through 40+ countries with my LUNA Cabin. It's been slammed by baggage handlers, dragged across cobblestones, and stuffed beyond reason. Still looks brand new."</blockquote>
+          <div class="testimonial-card__author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Marcus T." />
+            <div>
+              <strong>Marcus T.</strong>
+              <span>Travel Photographer · London</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-card--featured" data-aos="fade-up" data-aos-delay="120">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>"I fly 150,000 miles a year. LUNA's silent wheels have saved my sanity in 5am airports more times than I can count. The USB charging port alone is worth every penny."</blockquote>
+          <div class="testimonial-card__author">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=100&q=80" alt="Priya S." />
+            <div>
+              <strong>Priya S.</strong>
+              <span>Global Strategy Consultant · Singapore</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>"Bought the Full Set for our honeymoon and three years later we're still using them weekly. The lifetime warranty gave us total peace of mind. Absolute quality."</blockquote>
+          <div class="testimonial-card__author">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&q=80" alt="Jordan & Alex" />
+            <div>
+              <strong>Jordan & Alex K.</strong>
+              <span>Digital Nomads · Barcelona</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="press-logos">
+        <p class="press-logos__label">As seen in</p>
+        <div class="press-logos__row">
+          <span>Condé Nast Traveller</span>
+          <span>Forbes</span>
+          <span>Monocle</span>
+          <span>Wallpaper*</span>
+          <span>Vogue</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="cta">
+    <div class="cta-section__bg">
+      <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1800&q=80" alt="City at night travel" />
+      <div class="cta-section__overlay"></div>
+    </div>
+    <div class="cta-section__content container">
+      <p class="section-eyebrow section-eyebrow--light">Limited Edition Drop</p>
+      <h2 class="cta-section__title">Your Next Adventure<br />Starts Here.</h2>
+      <p class="cta-section__sub">Join 250,000+ LUNA travellers. Free global shipping on all orders. 30-day no-questions return. Lifetime warranty included.</p>
+      <div class="cta-section__email">
+        <input type="email" placeholder="Enter your email for 10% off your first order" class="cta-section__input" />
+        <button class="btn btn--gold">Claim Offer</button>
+      </div>
+      <p class="cta-section__disclaimer">No spam. Unsubscribe anytime. We hate junk mail as much as lost luggage.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo">LUNA</a>
+        <p>Premium travel goods for the modern explorer. Designed in London. Loved worldwide.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.26-5.33 1.26-5.33s-.32-.64-.32-1.59c0-1.49.87-2.61 1.94-2.61.92 0 1.36.69 1.36 1.52 0 .93-.59 2.31-.9 3.59-.26 1.07.54 1.94 1.59 1.94 1.91 0 3.19-2.43 3.19-5.31 0-2.19-1.48-3.73-3.6-3.73-2.45 0-3.89 1.84-3.89 3.74 0 .74.28 1.53.64 1.96a.26.26 0 01.06.24l-.24.97c-.08.31-.26.38-.6.23-1.73-.8-2.81-3.32-2.81-5.35 0-3.44 2.5-6.61 7.21-6.61 3.79 0 6.73 2.7 6.73 6.3 0 3.76-2.37 6.79-5.66 6.79-1.11 0-2.14-.58-2.5-1.26l-.68 2.54c-.25.95-.91 2.14-1.35 2.87A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Cabin (20")</a></li>
+          <li><a href="#">Explorer (24")</a></li>
+          <li><a href="#">Voyager (28")</a></li>
+          <li><a href="#">Full Set Bundle</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Lifetime Warranty</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Track Your Order</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2024 LUNA Luggage Ltd. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
