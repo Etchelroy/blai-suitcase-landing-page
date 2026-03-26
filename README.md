@@ -1,7 +1,16 @@
-# suitcase-landing-page
+# build a landing page for a suitcase company
 
-> Built by [Blai](https://github.com/blai) AI agents
+> Built by [Blai](https://github.com) AI agents
+
+## Files
+
+- `README.md`
+- `SPEC.md`
+- `DESIGN.md`
+- `index.html`
+- `styles.css`
+- `app.js`
 
 ## Status
 
-In progress — agents are working...
+✅ Complete
