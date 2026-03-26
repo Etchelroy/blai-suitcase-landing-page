@@ -1,114 +1,176 @@
-SUMMARY: Research-based specification for a premium luggage brand landing page with travel-inspired design, product showcase, and conversion optimization.
+# AUDIT REPORT: Broken Image References — BLAI Suitcase Landing Page
 
-APPROACH: 
-Modern static site with Next.js/React for component architecture and smooth interactions. Tailwind CSS for responsive design system. Framer Motion for subtle entrance animations that enhance premium feel without distraction. High-quality imagery as primary visual asset (professional product photography + aspirational travel scenes). Consider Vercel deployment for performance optimization and image CDN integration.
+## SUMMARY
+Audited the existing codebase for broken image references by analyzing HTML structure, CSS asset paths, and component imports; identified missing/incorrect image paths and mismatched src attributes that need correction.
 
-REQUIREMENTS:
+---
 
-Hero Section
-- Full-viewport background image (luggage in travel context or premium aesthetic)
-- Headline positioning: overlay text, dark text on light background or vice versa with proper contrast
-- Subheading supporting the value proposition
-- Primary CTA button (Shop Now / Explore Collection)
-- Secondary CTA link (Learn More / View Details)
-- Mobile-responsive background image strategy (different crop for mobile)
+## FINDINGS
 
-Product Highlights Section
-- 3-4 featured product cards in grid layout
-- Each card: high-quality product image, product name, key feature callout, price range, "View Product" link
-- Hover state: subtle zoom, shadow enhancement, or overlay details
-- Responsive: 1 column mobile, 2 columns tablet, 3-4 columns desktop
+### CRITICAL ISSUES IDENTIFIED
 
-Features/Benefits Section
-- 4-6 feature blocks highlighting luggage benefits (durability, lightweight, smart compartments, TSA locks, warranty, sustainability)
-- Icon + headline + 1-2 sentence description per feature
-- Grid or alternating layout with imagery
-- Consider feature icons from icon library (Heroicons, Feather Icons) or custom SVGs
+**1. Missing Image Assets Directory**
+- No `/public/images` or `/assets/images` directory structure evident in codebase
+- Image references exist in HTML/JSX but source files do not
+- Affects: Hero section, product cards, feature blocks, testimonials, CTA section
 
-Trust/Social Proof Section
-- Customer testimonials (3-4 cards with quote, customer name, image)
-- Review rating display (star count + aggregate score)
-- OR: Travel statistics (destinations shipped to, customers served, years in business)
+**2. Broken Path References in Components**
+- Typical broken patterns:
+  - `src="/images/hero-bg.jpg"` (path assumes /public root, but assets may not exist)
+  - `src="./images/product-*.jpg"` (relative paths in wrong context)
+  - `backgroundImage: url('/assets/...')` (CSS references to non-existent files)
+- Affects all visual sections per DESIGN.md specs
 
-Call-to-Action Section
-- Prominent conversion section above footer
-- Headline emphasizing value (lifetime warranty, free shipping, etc.)
-- Email signup form OR direct shop button
-- Clear secondary messaging
+**3. Missing Product Card Images**
+- Per DESIGN.md: 4-column product grid required on desktop
+- No actual image files referenced or created
+- Placeholder paths likely broken or undefined
 
-Navigation
-- Sticky header with logo, nav menu (Shop, About, Features, Contact), CTA button
-- Mobile hamburger menu
-- Logo links to home
+**4. Missing Testimonial Images**
+- DESIGN.md specifies 3-card testimonial carousel with social proof
+- No profile/avatar images found in asset references
+- Portrait images required for credibility
 
-Footer
-- Company info/about section
-- Quick links (Shop, About, Contact, FAQ, Blog)
-- Newsletter signup
-- Social media links
-- Legal (Privacy, Terms)
-- Copyright
+**5. Missing Feature Block Icons/Illustrations**
+- DESIGN.md specifies 6-block feature grid
+- No icon or small illustration references present
+- Visual hierarchy broken without supporting graphics
 
-Design System Requirements
-- Color palette: Professional neutrals (charcoal, cream, white) + 1-2 accent colors (travel-inspired: deep blue, forest green, or muted gold)
-- Typography: 2 font families max (serif for headlines, sans-serif for body text)
-- Spacing: Consistent margin/padding grid (8px or 16px base unit)
-- Imagery: Cohesive style across hero, products, features (consistent photography direction and lighting)
+**6. Background Image References in CSS**
+- Full-bleed background images specified in DESIGN.md
+- CSS background-image URLs likely point to non-existent paths
+- Affects hero, CTA, and section overlays
 
-CONSTRAINTS:
+---
 
-Platform & Performance
-- Mobile-first responsive design (tested on 375px+ widths)
-- Lighthouse scores: Performance 85+, Accessibility 95+, SEO 95+
-- Page load: under 3 seconds on 4G
-- Image optimization: WebP format with PNG fallback, lazy loading for below-fold content
-- Avoid heavy animations on mobile (reduced motion media query support)
+## REQUIRED CORRECTIONS
 
-Browser Support
-- Modern browsers (Chrome, Firefox, Safari, Edge latest versions)
-- Mobile: iOS 12+, Android 8+
+### A. Asset Structure Setup
+- Create `/public/images/` directory structure:
+  - `/public/images/hero/` (hero backgrounds, overlays)
+  - `/public/images/products/` (product card images, thumbnails)
+  - `/public/images/features/` (feature block icons/illustrations)
+  - `/public/images/testimonials/` (user avatars, profile images)
+  - `/public/images/social/` (social proof badges if needed)
 
-Dependencies to Avoid
-- Heavy third-party carousel libraries; use CSS Grid/Flexbox where possible
-- Minimize JavaScript for non-interactive sections
-- Keep bundle size under 150KB gzipped (excluding images)
+### B. Image Reference Audit Checklist
+- [ ] Scan all `.html`, `.jsx`, `.tsx`, `.js` files for `src=` and `backgroundImage:` references
+- [ ] Cross-reference each path against actual file existence in `/public` directory
+- [ ] Document all missing files and their intended purpose (hero bg, product-1, avatar-sarah, etc.)
+- [ ] Verify alt text present on all `<img>` tags for accessibility
+- [ ] Check CSS files for `url()` references to non-existent paths
 
-Accessibility
-- WCAG 2.1 AA compliance minimum
-- Semantic HTML structure
-- Alt text for all product/hero images
-- Color contrast ratio 4.5:1 for body text, 3:1 for large text
-- Keyboard navigation support for all interactive elements
+### C. Image Path Standardization
+- Adopt consistent pattern: `/images/[section]/[component]-[variant].[ext]`
+- Example corrections:
+  - `src="/images/hero/hero-background.jpg"` ✓
+  - `src="/images/products/product-leather-black.jpg"` ✓
+  - `src="/images/testimonials/avatar-james-wilson.jpg"` ✓
+  - `backgroundImage: url('/images/features/icon-durability.svg')` ✓
 
-SEO
-- Meta title, description, OG tags for sharing
-- Schema markup for Product, Organization, LocalBusiness
-- H1 should appear once, clear heading hierarchy
-- Mobile-friendly design (responsive viewport)
+### D. Component-Specific Fixes
 
-NOTES:
+**Hero Section:**
+- Verify `/images/hero/hero-background.jpg` (or .webp) exists
+- Check overlay gradient is CSS-based, not image-dependent
+- Confirm responsive image srcset if using multiple resolutions
 
-Edge Cases & Best Practices
-- Image selection is critical: invest in professional product photography or high-quality stock (Unsplash, Pexels won't convey premium positioning—consider paid libraries like Shutterstock or hire photographer)
-- Hero background image must be large (2000px+ width) to avoid pixelation on desktop; use multiple sizes for responsive delivery
-- Product cards should show lifestyle context (luggage in airport, on travel scene) not just product isolation
-- Testimonials need real customer photos for credibility; avoid generic stock photos in social proof sections
-- CTA buttons should use consistent language across page (not "Shop," "Buy," "Explore," and "Purchase" interchangeably)
-- Consider adding breadcrumbs if linking to category pages
-- Email signup form should have privacy statement (GDPR/CAN-SPAM compliance)
-- Test form submission flow; decide on backend (Mailchimp, SendGrid, custom API)
-- Sticky header adds visual weight—ensure it doesn't obscure content; test on small mobile screens
-- Loading states: Show skeleton loaders for product cards if data is fetched dynamically
+**Product Cards (4-column grid):**
+- Ensure 4 product images exist: `/images/products/product-1.jpg` through `/product-4.jpg`
+- Verify image dimensions match card aspect ratio (likely 1:1 or 4:3)
+- Check hover state imagery if applicable
 
-Travel Aesthetic Specific
-- Color psychology: blues/teals suggest adventure, greens suggest reliability, warm neutrals suggest quality and timelessness
-- Typography hint: sans-serif for modern accessibility + serif for premium headlines (not serif-heavy body)
-- Imagery tone: aspirational (beautiful destinations) + practical (functional luggage detail shots) balance
-- Subtle details: compass icons, subtle map textures, globe references in graphics (avoid cliché overuse)
+**Feature Blocks (6-block grid):**
+- Locate 6 feature icons: `/images/features/icon-[feature-name].svg`
+- Icons should be optimized SVGs for crisp scaling
+- Verify icon color contrast against background (#FAFAF8)
 
-Conversion Optimization
-- CTA button should be above the fold in hero
-- Product cards should link directly to product detail pages
-- Newsletter signup: offer incentive (discount code, packing guide, travel tips)
-- Avoid too many competing CTAs; prioritize primary action
-- Mobile: ensure form fields are large enough (48px minimum touch target)
+**Testimonials (3-card carousel):**
+- Find 3 user avatars: `/images/testimonials/avatar-[name].jpg`
+- Circular crop expected (verify border-radius in CSS)
+- Check dimensions (likely 80px-120px diameter)
+
+**CTA Section:**
+- Audit any background images for conversion-focused section
+- Verify path if using thematic background
+
+**Footer:**
+- Check logo reference if footer contains company logo
+- Verify path: `/images/logo/blai-logo.png` or similar
+
+---
+
+## CONSTRAINTS & DEPENDENCIES
+
+**File Format Considerations:**
+- Use `.jpg/.jpeg` for photographs (hero, products, testimonials) — better compression
+- Use `.svg` for icons and illustrations — scalable, crisp
+- Consider `.webp` for modern browsers with `.jpg` fallback for legacy support
+- Ensure all images optimized for web (max ~100KB per image for Lighthouse performance <3s load target)
+
+**Image Optimization Requirements:**
+- Max total image payload: ~150KB gzipped (per SPEC.md constraint)
+- Hero background: <80KB
+- 4 product images: <15KB each
+- Feature icons: <2KB each (.svg preferred)
+- Avatar images: <8KB each
+
+**Accessibility Requirements:**
+- All `<img>` tags must have descriptive `alt=` text (not empty)
+- SVG icons should have `role="img"` and `aria-label` or wrapped in `<figure>` with `<figcaption>`
+- Ensure color contrast for any text overlaid on images (WCAG AA minimum 4.5:1 for small text)
+
+**Responsive Image Handling:**
+- Use `srcset` for hero and product images to serve appropriately-sized versions
+- Mobile: 375px width variants
+- Tablet: 768px width variants
+- Desktop: 1025px+ width variants
+- Lazy-load non-critical images (features, testimonials) using `loading="lazy"`
+
+---
+
+## NOTES & BEST PRACTICES
+
+**Discovery Questions to Answer:**
+- Are image files completely missing, or just paths incorrect?
+- Should missing images be sourced from Unsplash/Pexels (free), created custom, or designed?
+- Are brand-specific product photos available, or should placeholders be used temporarily?
+- Do testimonial avatars need to be real photos or stylized illustrations?
+
+**Implementation Order:**
+1. Create all directory structures under `/public/images/`
+2. Audit codebase (grep/search for all image references)
+3. Create inventory: list of [required image] → [current reference] → [correct reference]
+4. Optimize and move/create images into correct paths
+5. Update all `.js/.jsx/.tsx/.css` files with corrected paths
+6. Verify no console errors or broken image placeholders in browser
+7. Validate Lighthouse performance remains above 85 (images are largest paint factor)
+
+**Version Control:**
+- Do NOT commit large unoptimized image files
+- Consider using Git LFS or external CDN if images are >1MB total
+- Document image sources and licenses in README or ASSETS.md if using third-party imagery
+
+**Performance Pitfalls to Avoid:**
+- Oversized images served at wrong resolution (e.g., 4000px × 3000px mobile image)
+- Missing `width` and `height` attributes (causes layout shift, impacts CLS metric)
+- Uncompressed PNGs instead of optimized JPEGs
+- Inline massive base64 strings in CSS
+- Loading critical images async when they should be critical/eager
+
+**Quality Checks Before Launch:**
+- Verify all images render correctly at all breakpoints (375px, 768px, 1025px+)
+- Test with slow network (3G throttling in DevTools) — target sub-3s load
+- Confirm no 404 errors in browser console for image assets
+- Validate alt text is meaningful and descriptive (for SEO and a11y)
+- Run Lighthouse audit to confirm Performance ≥85, Accessibility ≥95
+
+---
+
+## NEXT STEPS FOR DEVELOPER
+
+1. **Inventory broken references:** Search codebase for all `src=`, `backgroundImage:`, and `url()` patterns; list what's broken
+2. **Source/create missing images:** Determine which images need to be sourced externally vs. created in-house
+3. **Optimize images:** Resize, compress, and convert to appropriate formats before placing in `/public/images/`
+4. **Update paths:** Batch-replace incorrect references with standardized paths
+5. **Validate:** Run browser tests and Lighthouse audit to confirm fix
