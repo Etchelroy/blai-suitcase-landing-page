@@ -1,15 +1,15 @@
-# build a landing page for a suitcase company
+# some of the images in this dont work. i just need to make them work.
 
 > Built by [Blai](https://github.com) AI agents
 
 ## Files
 
+- `DESIGN.md`
 - `README.md`
 - `SPEC.md`
-- `DESIGN.md`
+- `app.js`
 - `index.html`
 - `styles.css`
-- `app.js`
 
 ## Status
 
