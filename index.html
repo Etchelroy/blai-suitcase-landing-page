@@ -3,514 +3,389 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRAVERSE — Premium Luggage for Every Adventure</title>
-  <meta name="description" content="Discover TRAVERSE premium luggage — crafted for durability, elegance, and every adventure. Shop our collection of carry-ons, checked bags, and travel accessories." />
-  <meta property="og:title" content="TRAVERSE — Premium Luggage" />
-  <meta property="og:description" content="Uncompromising durability and elegance on every adventure." />
+  <meta name="description" content="TRAVERSE Premium Luggage — Durable, elegant travel companions for every adventure." />
+  <meta name="theme-color" content="#1A1A18" />
+  
+  <!-- OG Tags -->
+  <meta property="og:title" content="TRAVERSE Premium Luggage" />
+  <meta property="og:description" content="Experience uncompromising durability and elegance on every adventure." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=630&fit=crop" />
   <meta property="og:type" content="website" />
+  
+  <title>TRAVERSE — Premium Luggage & Travel Gear</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="mainNav" class="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="TRAVERSE Home">TRAVERSE</a>
-
-      <ul class="nav__links" role="list">
-        <li><a href="#products">Shop</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Stories</a></li>
-        <li><a href="#cta">About</a></li>
-      </ul>
-
-      <div class="nav__actions">
-        <a href="#products" class="nav__cta-link btn btn--gold btn--sm">Shop Now</a>
-        <button class="nav__hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-        </button>
+      <a href="#hero" class="nav__logo">TRAVERSE</a>
+      
+      <div class="nav__links">
+        <a href="#products">Shop</a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Stories</a>
+        <a href="#cta">Support</a>
       </div>
+      
+      <div class="nav__actions">
+        <button class="nav__cart" aria-label="Shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </button>
+        <button class="btn btn--gold btn--sm">Book Journey</button>
+      </div>
+      
+      <button id="hamburger" class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
-      <ul role="list">
-        <li><a href="#products">Shop</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Stories</a></li>
-        <li><a href="#cta">About</a></li>
-        <li><a href="#products" class="btn btn--gold">Shop Now</a></li>
-      </ul>
+    
+    <div id="mobileMenu" class="nav__mobile">
+      <a href="#products">Shop</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Stories</a>
+      <a href="#cta">Support</a>
+      <button class="btn btn--gold" style="width: 100%;">Book Journey</button>
     </div>
   </nav>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero" id="hero" aria-label="Hero">
-    <div class="hero__bg">
-      <img
-        src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&h=900&fit=crop&auto=format&q=80"
-        srcset="
-          https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=768&h=500&fit=crop&auto=format&q=75 768w,
-          https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=700&fit=crop&auto=format&q=80 1200w,
-          https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&h=900&fit=crop&auto=format&q=80 1600w
-        "
-        sizes="100vw"
-        alt="A traveller walking along a winding mountain road with luggage, scenic landscape at golden hour"
-        class="hero__img"
-        loading="eager"
-        fetchpriority="high"
-      />
-    </div>
-    <div class="hero__overlay" aria-hidden="true"></div>
-    <div class="hero__content container">
-      <span class="section-eyebrow" data-aos="fade-up">New Collection 2024</span>
-      <h1 class="hero__headline" data-aos="fade-up" data-aos-delay="100">
-        Your Journey,<br>Perfectly Packed
-      </h1>
-      <p class="hero__sub" data-aos="fade-up" data-aos-delay="200">
-        Experience uncompromising durability and elegance on every adventure.
-      </p>
-      <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
-        <a href="#products" class="btn btn--gold">Explore Collection</a>
-        <a href="#features" class="hero__link">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-          Watch Our Story
-        </a>
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="hero">
+    <img 
+      src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&h=900&fit=crop" 
+      alt="Winding mountain road with traveler and premium luggage"
+      class="hero__bg"
+    />
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="container">
+        <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">Your Journey, Perfectly Packed</h1>
+        <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">Experience uncompromising durability and elegance on every adventure.</p>
+        <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
+          <button class="btn btn--gold">Explore Collection</button>
+          <a href="#" class="hero__link">Watch Our Story →</a>
+        </div>
       </div>
-    </div>
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <span></span>
     </div>
   </section>
 
-  <!-- ===== STATS BAR ===== -->
-  <div class="stats-bar" aria-label="Company statistics">
+  <!-- ========== PRODUCTS ========== -->
+  <section id="products" class="products">
     <div class="container">
-      <div class="stats-bar__grid">
-        <div class="stat-item">
-          <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Countries Shipped</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="240000">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Happy Travellers</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="12">0</span><span class="stat-suffix"> yrs</span>
-          <span class="stat-label">In Business</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
-          <span class="stat-label">5-Star Reviews</span>
-        </div>
+      <div class="section-header">
+        <span class="section-eyebrow">Premium Collection</span>
+        <h2 class="section-title">Crafted for Every Adventure</h2>
+        <p class="section-sub">Explore our meticulously designed luggage, engineered for durability, style, and seamless travel.</p>
       </div>
-    </div>
-  </div>
-
-  <!-- ===== PRODUCT SHOWCASE ===== -->
-  <section class="products" id="products" aria-labelledby="products-title">
-    <div class="container">
-      <header class="section-header" data-aos="fade-up">
-        <span class="section-eyebrow">Our Collection</span>
-        <h2 class="section-title" id="products-title">Crafted for Every Adventure</h2>
-        <p class="section-sub">Each piece engineered with aerospace-grade polycarbonate and finished with hand-stitched details that stand the test of every journey.</p>
-      </header>
-
+      
       <div class="products__grid">
-
-        <!-- Card 1 — Carry-On -->
-        <article class="product-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="product-card__img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=600&h=700&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=400&h=460&fit=crop&auto=format&q=75 400w,
-                https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=600&h=700&fit=crop&auto=format&q=80 600w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              alt="TRAVERSE Navigator Carry-On — sleek black polycarbonate hardshell suitcase with spinner wheels"
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="product-card__img-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop" 
+              alt="TRAVERSE Carry-On Pro luggage in charcoal black"
               class="product-card__img"
-              loading="lazy"
             />
-            <div class="product-card__overlay" aria-hidden="true">
-              <a href="#" class="btn btn--ghost btn--sm">Quick View</a>
-            </div>
-            <span class="product-card__badge">Bestseller</span>
           </div>
-          <div class="product-card__body">
-            <h3 class="product-card__name">Navigator Carry-On</h3>
-            <p class="product-card__desc">Cabin-approved. Lightweight polycarbonate shell with TSA lock.</p>
-            <div class="product-card__footer">
-              <span class="product-card__price">$285</span>
-              <a href="#" class="btn btn--gold btn--sm">Add to Bag</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2 — Medium Checked -->
-        <article class="product-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="product-card__img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=600&h=700&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=400&h=460&fit=crop&auto=format&q=75 400w,
-                https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=600&h=700&fit=crop&auto=format&q=80 600w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              alt="TRAVERSE Horizon Medium Checked bag — warm sand coloured hardshell luggage standing upright"
+          <h3 class="product-card__name">Carry-On Pro</h3>
+          <p class="product-card__feature">TSA-approved, 22-inch spinner</p>
+          <p class="product-card__price">$299</p>
+          <a href="#" class="product-card__link">View Details →</a>
+        </div>
+        
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card__img-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&h=500&fit=crop" 
+              alt="TRAVERSE Weekender Pro duffel bag in premium leather"
               class="product-card__img"
-              loading="lazy"
             />
-            <div class="product-card__overlay" aria-hidden="true">
-              <a href="#" class="btn btn--ghost btn--sm">Quick View</a>
-            </div>
           </div>
-          <div class="product-card__body">
-            <h3 class="product-card__name">Horizon Medium</h3>
-            <p class="product-card__desc">Perfect for weekend trips. Dual-zip interior with garment sleeve.</p>
-            <div class="product-card__footer">
-              <span class="product-card__price">$345</span>
-              <a href="#" class="btn btn--gold btn--sm">Add to Bag</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 — Large Checked -->
-        <article class="product-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="product-card__img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=600&h=700&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400&h=460&fit=crop&auto=format&q=75 400w,
-                https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=600&h=700&fit=crop&auto=format&q=80 600w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              alt="TRAVERSE Expedition Large Checked bag — dark navy hardshell with gold accent zipper detail"
+          <h3 class="product-card__name">Weekender Pro</h3>
+          <p class="product-card__feature">Premium leather, convertible strap</p>
+          <p class="product-card__price">$399</p>
+          <a href="#" class="product-card__link">View Details →</a>
+        </div>
+        
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card__img-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1509156141039-1e50f3cb9184?w=500&h=500&fit=crop" 
+              alt="TRAVERSE Expedition 28 checked luggage in navy blue"
               class="product-card__img"
-              loading="lazy"
             />
-            <div class="product-card__overlay" aria-hidden="true">
-              <a href="#" class="btn btn--ghost btn--sm">Quick View</a>
-            </div>
-            <span class="product-card__badge product-card__badge--new">New</span>
           </div>
-          <div class="product-card__body">
-            <h3 class="product-card__name">Expedition Large</h3>
-            <p class="product-card__desc">Extended travel made easy. 360° spinner wheels, expandable.</p>
-            <div class="product-card__footer">
-              <span class="product-card__price">$425</span>
-              <a href="#" class="btn btn--gold btn--sm">Add to Bag</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4 — Travel Set -->
-        <article class="product-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="product-card__img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=700&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=460&fit=crop&auto=format&q=75 400w,
-                https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=700&fit=crop&auto=format&q=80 600w
-              "
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              alt="TRAVERSE Signature Travel Set — matching set of three suitcases in olive green displayed together"
+          <h3 class="product-card__name">Expedition 28</h3>
+          <p class="product-card__feature">Large capacity, lifetime warranty</p>
+          <p class="product-card__price">$449</p>
+          <a href="#" class="product-card__link">View Details →</a>
+        </div>
+        
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-card__img-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1553935305-eea46b925e34?w=500&h=500&fit=crop" 
+              alt="TRAVERSE Ultra-Lite backpack in sustainable materials"
               class="product-card__img"
-              loading="lazy"
             />
-            <div class="product-card__overlay" aria-hidden="true">
-              <a href="#" class="btn btn--ghost btn--sm">Quick View</a>
-            </div>
-            <span class="product-card__badge product-card__badge--sale">Save 18%</span>
           </div>
-          <div class="product-card__body">
-            <h3 class="product-card__name">Signature Set (3-Piece)</h3>
-            <p class="product-card__desc">Complete travel collection. Carry-on, medium, and large.</p>
-            <div class="product-card__footer">
-              <span class="product-card__price">$895 <s class="product-card__price--was">$1,090</s></span>
-              <a href="#" class="btn btn--gold btn--sm">Add to Bag</a>
-            </div>
-          </div>
-        </article>
-
-      </div><!-- /.products__grid -->
+          <h3 class="product-card__name">Ultra-Lite Backpack</h3>
+          <p class="product-card__feature">Sustainable materials, ergonomic</p>
+          <p class="product-card__price">$179</p>
+          <a href="#" class="product-card__link">View Details →</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FEATURES GRID ===== -->
-  <section class="features" id="features" aria-labelledby="features-title">
+  <!-- ========== FEATURES ========== -->
+  <section id="features" class="features">
     <div class="container">
-      <header class="section-header" data-aos="fade-up">
-        <span class="section-eyebrow">Why TRAVERSE</span>
-        <h2 class="section-title" id="features-title">Built Different. Built to Last.</h2>
-        <p class="section-sub">Every detail is engineered for the modern traveller who refuses to compromise.</p>
-      </header>
-
+      <div class="section-header">
+        <span class="section-eyebrow">Why Choose TRAVERSE</span>
+        <h2 class="section-title">Built for the Discerning Traveler</h2>
+      </div>
+      
       <div class="features__grid">
-
         <div class="feature-block" data-aos="fade-up" data-aos-delay="0">
-          <div class="feature-block__icon" aria-hidden="true">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="feature-block__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+            </svg>
           </div>
-          <h3 class="feature-block__title">Aerospace Shell</h3>
-          <p class="feature-block__desc">Aircraft-grade polycarbonate absorbs impact without cracking — tested to 500 kg crush resistance.</p>
+          <h3 class="feature-block__title">Military-Grade Durability</h3>
+          <p class="feature-block__desc">Built to withstand extreme conditions with reinforced frames and premium materials tested for 10+ years of reliable use.</p>
         </div>
-
-        <div class="feature-block" data-aos="fade-up" data-aos-delay="80">
-          <div class="feature-block__icon" aria-hidden="true">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="feature-block__title">Lifetime Warranty</h3>
-          <p class="feature-block__desc">Every bag is covered for life. Damage, defects, or airline mishandling — we fix or replace it free.</p>
-        </div>
-
-        <div class="feature-block" data-aos="fade-up" data-aos-delay="160">
-          <div class="feature-block__icon" aria-hidden="true">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <h3 class="feature-block__title">TSA-Approved Lock</h3>
-          <p class="feature-block__desc">Integrated combination lock recognised by airport security worldwide. Never worry at check-in.</p>
-        </div>
-
-        <div class="feature-block" data-aos="fade-up" data-aos-delay="0">
-          <div class="feature-block__icon" aria-hidden="true">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
-          </div>
-          <h3 class="feature-block__title">Ultra-Lightweight</h3>
-          <p class="feature-block__desc">Our carry-on weighs just 2.1 kg — 30% lighter than industry average, maximising your baggage allowance.</p>
-        </div>
-
-        <div class="feature-block" data-aos="fade-up" data-aos-delay="80">
-          <div class="feature-block__icon" aria-hidden="true">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-block__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
           </div>
           <h3 class="feature-block__title">Smart Compartments</h3>
-          <p class="feature-block__desc">Compression straps, laptop sleeve, laundry divider, and a quick-access exterior pocket keep you organised.</p>
+          <p class="feature-block__desc">Intelligently designed storage with dedicated pockets for electronics, documents, and accessories—everything organized at your fingertips.</p>
         </div>
-
-        <div class="feature-block" data-aos="fade-up" data-aos-delay="160">
-          <div class="feature-block__icon" aria-hidden="true">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-block__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+              <path d="M7 11V7a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v4"></path>
+            </svg>
           </div>
-          <h3 class="feature-block__title">Sustainable Materials</h3>
-          <p class="feature-block__desc">Lining crafted from 100% recycled ocean-plastic bottles. Carbon-neutral shipping on every order.</p>
+          <h3 class="feature-block__title">TSA-Approved Locks</h3>
+          <p class="feature-block__desc">Integrated TSA CheckPoint-friendly locks keep your belongings secure while allowing inspections without damage.</p>
         </div>
-
-      </div><!-- /.features__grid -->
+        
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-block__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-block__title">Lifetime Warranty</h3>
+          <p class="feature-block__desc">We stand behind our craftsmanship. Every TRAVERSE product includes comprehensive lifetime coverage against defects.</p>
+        </div>
+        
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-block__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.5-9c.828 0 1.5-.672 1.5-1.5S16.328 8 15.5 8 14 8.672 14 9.5s.672 1.5 1.5 1.5zm-7 0c.828 0 1.5-.672 1.5-1.5S9.328 8 8.5 8 7 8.672 7 9.5 7.672 11 8.5 11z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-block__title">Lightweight Engineering</h3>
+          <p class="feature-block__desc">Advanced composite materials deliver maximum strength with minimal weight—pack more, carry less.</p>
+        </div>
+        
+        <div class="feature-block" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-block__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-block__title">Eco-Conscious Design</h3>
+          <p class="feature-block__desc">Manufactured with sustainable materials and ethical practices—travel responsibly with TRAVERSE.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+  <!-- ========== STATS ========== -->
+  <section class="stats">
     <div class="container">
-      <header class="section-header" data-aos="fade-up">
-        <span class="section-eyebrow section-eyebrow--light">Traveller Stories</span>
-        <h2 class="section-title" id="testimonials-title" style="color:#FAFAF8;">Words from the Road</h2>
-        <p class="section-sub" style="color:rgba(250,250,248,0.7);">Real adventurers. Genuine experiences. Unfiltered opinions.</p>
-      </header>
-
-      <div class="testimonials__grid">
-
-        <!-- Testimonial 1 -->
-        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
-            ★★★★★
-          </div>
-          <blockquote class="testimonial-card__quote">
-            "I've taken this carry-on through 40 countries and it looks brand new. The TSA lock saved me in Dubai when airline staff needed to open it — not a scratch on the bag."
-          </blockquote>
-          <footer class="testimonial-card__author">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&auto=format&q=80 1x,
-                https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=160&h=160&fit=crop&auto=format&q=80 2x
-              "
-              alt="Portrait of Sarah M., travel photographer"
-              class="testimonial-card__avatar"
-              loading="lazy"
-              width="56"
-              height="56"
-            />
-            <div>
-              <strong class="testimonial-card__name">Sarah M.</strong>
-              <span class="testimonial-card__role">Travel Photographer, London</span>
-            </div>
-          </footer>
-        </article>
-
-        <!-- Testimonial 2 -->
-        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="120">
-          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
-            ★★★★★
-          </div>
-          <blockquote class="testimonial-card__quote">
-            "Bought the 3-piece set for our family trip to Japan. The spinner wheels glide across every surface — cobblestones, airport terminals, even gravel paths in Kyoto."
-          </blockquote>
-          <footer class="testimonial-card__author">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format&q=80 1x,
-                https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&auto=format&q=80 2x
-              "
-              alt="Portrait of James K., software engineer"
-              class="testimonial-card__avatar"
-              loading="lazy"
-              width="56"
-              height="56"
-            />
-            <div>
-              <strong class="testimonial-card__name">James K.</strong>
-              <span class="testimonial-card__role">Software Engineer, Toronto</span>
-            </div>
-          </footer>
-        </article>
-
-        <!-- Testimonial 3 -->
-        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="240">
-          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
-            ★★★★★
-          </div>
-          <blockquote class="testimonial-card__quote">
-            "The lifetime warranty is real. My bag was damaged by baggage handlers in Buenos Aires — TRAVERSE shipped a replacement to my hotel within 48 hours. Extraordinary service."
-          </blockquote>
-          <footer class="testimonial-card__author">
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&auto=format&q=80"
-              srcset="
-                https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&auto=format&q=80 1x,
-                https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=160&h=160&fit=crop&auto=format&q=80 2x
-              "
-              alt="Portrait of Priya L., marketing director"
-              class="testimonial-card__avatar"
-              loading="lazy"
-              width="56"
-              height="56"
-            />
-            <div>
-              <strong class="testimonial-card__name">Priya L.</strong>
-              <span class="testimonial-card__role">Marketing Director, Singapore</span>
-            </div>
-          </footer>
-        </article>
-
-      </div><!-- /.testimonials__grid -->
-    </div>
-  </section>
-
-  <!-- ===== CTA SECTION ===== -->
-  <section class="cta-section" id="cta" aria-labelledby="cta-title">
-    <div class="cta-section__bg" aria-hidden="true">
-      <img
-        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&h=700&fit=crop&auto=format&q=75"
-        srcset="
-          https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=768&h=400&fit=crop&auto=format&q=70 768w,
-          https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&h=600&fit=crop&auto=format&q=75 1200w,
-          https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&h=700&fit=crop&auto=format&q=75 1400w
-        "
-        sizes="100vw"
-        alt=""
-        class="cta-section__img"
-        loading="lazy"
-      />
-    </div>
-    <div class="cta-section__overlay" aria-hidden="true"></div>
-    <div class="container cta-section__content">
-      <span class="section-eyebrow" data-aos="fade-up">Limited Time</span>
-      <h2 class="cta-section__title" id="cta-title" data-aos="fade-up" data-aos-delay="80">
-        Free Shipping on<br>Every Order, Forever.
-      </h2>
-      <p class="cta-section__sub" data-aos="fade-up" data-aos-delay="160">
-        Plus a lifetime warranty, 100-day trial, and carbon-neutral delivery. No conditions, no fine print.
-      </p>
-      <div class="cta-section__actions" data-aos="fade-up" data-aos-delay="240">
-        <a href="#products" class="btn btn--gold">Shop the Collection</a>
-        <a href="#features" class="btn btn--ghost">Learn More</a>
-      </div>
-      <form class="cta-section__form" id="ctaForm" novalidate data-aos="fade-up" data-aos-delay="320" aria-label="Newsletter signup">
-        <label for="emailInput" class="visually-hidden">Email address</label>
-        <input
-          type="email"
-          id="emailInput"
-          name="email"
-          class="cta-section__input"
-          placeholder="Enter your email for exclusive offers"
-          autocomplete="email"
-          required
-          aria-required="true"
-        />
-        <button type="submit" class="btn btn--gold">Join the Journey</button>
-      </form>
-      <p class="cta-section__form-msg" id="ctaFormMsg" role="status" aria-live="polite"></p>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer" id="footer" role="contentinfo">
-    <div class="container footer__grid">
-
-      <div class="footer__brand">
-        <a href="#" class="footer__logo" aria-label="TRAVERSE Home">TRAVERSE</a>
-        <p class="footer__tagline">Crafted for every adventure.<br>Trusted by 240,000+ travellers worldwide.</p>
-        <div class="footer__social" aria-label="Social media links">
-          <!-- Instagram -->
-          <a href="#" aria-label="TRAVERSE on Instagram" class="footer__social-link">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <!-- Twitter/X -->
-          <a href="#" aria-label="TRAVERSE on X (Twitter)" class="footer__social-link">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <!-- Pinterest -->
-          <a href="#" aria-label="TRAVERSE on Pinterest" class="footer__social-link">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.58 2.26-.87 3.51-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.11-2.4 3.11-5.24 0-2.16-1.46-3.68-3.55-3.68-2.42 0-3.84 1.81-3.84 3.68 0 .73.28 1.51.63 1.93a.25.25 0 0 1 .06.24c-.06.27-.2.85-.23.97-.04.16-.13.19-.3.12-1.12-.52-1.82-2.17-1.82-3.49 0-2.83 2.06-5.44 5.94-5.44 3.12 0 5.55 2.22 5.55 5.19 0 3.1-1.95 5.59-4.66 5.59-.91 0-1.77-.47-2.06-1.03l-.56 2.1c-.2.78-.75 1.75-1.12 2.35.85.26 1.75.4 2.68.4 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-          </a>
+      <div class="stats-bar" data-aos="fade-up">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500000">0</span>
+          <span class="stat-label">Journeys Taken</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="150">0</span>
+          <span class="stat-label">Countries Reached</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="25">0</span>
+          <span class="stat-label">Years Innovation</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="98">0</span>
+          <span class="stat-label">% Satisfaction</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <nav class="footer__nav" aria-label="Shop links">
-        <h4 class="footer__nav-title">Shop</h4>
-        <ul>
-          <li><a href="#products">Carry-Ons</a></li>
-          <li><a href="#products">Checked Bags</a></li>
-          <li><a href="#products">Travel Sets</a></li>
-          <li><a href="#products">Accessories</a></li>
-          <li><a href="#products">Sale</a></li>
-        </ul>
-      </nav>
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Trusted by Travelers</span>
+        <h2 class="section-title">Stories from the Road</h2>
+      </div>
+      
+      <div class="testimonials__grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-card__header">
+            <img 
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop" 
+              alt="Sarah Chen, travel photographer"
+              class="testimonial-card__avatar"
+            />
+            <div>
+              <h4 class="testimonial-card__name">Sarah Chen</h4>
+              <p class="testimonial-card__role">Travel Photographer</p>
+            </div>
+          </div>
+          <p class="testimonial-card__quote">"After 8 years of constant travel, my TRAVERSE carry-on is still going strong. The build quality is unmatched and it looks as beautiful as the day I bought it."</p>
+          <div class="testimonial-card__rating">★★★★★</div>
+        </div>
+        
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card__header">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" 
+              alt="James Rodriguez, business executive"
+              class="testimonial-card__avatar"
+            />
+            <div>
+              <h4 class="testimonial-card__name">James Rodriguez</h4>
+              <p class="testimonial-card__role">Business Executive</p>
+            </div>
+          </div>
+          <p class="testimonial-card__quote">"I travel 200+ days a year. TRAVERSE replaced my entire luggage collection. The warranty and customer service are exceptional."</p>
+          <div class="testimonial-card__rating">★★★★★</div>
+        </div>
+        
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card__header">
+            <img 
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" 
+              alt="Maria Gonzalez, adventure blogger"
+              class="testimonial-card__avatar"
+            />
+            <div>
+              <h4 class="testimonial-card__name">Maria Gonzalez</h4>
+              <p class="testimonial-card__role">Adventure Blogger</p>
+            </div>
+          </div>
+          <p class="testimonial-card__quote">"The design is stunning and functional. My followers constantly ask about my luggage. TRAVERSE is luxury travel without the pretension."</p>
+          <div class="testimonial-card__rating">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <nav class="footer__nav" aria-label="Company links">
-        <h4 class="footer__nav-title">Company</h4>
-        <ul>
-          <li><a href="#cta">About Us</a></li>
-          <li><a href="#testimonials">Stories</a></li>
-          <li><a href="#features">Sustainability</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-      </nav>
+  <!-- ========== CTA ========== -->
+  <section id="cta" class="cta">
+    <div class="container">
+      <div class="cta__content" data-aos="fade-up">
+        <h2 class="cta__title">Ready to Elevate Your Travels?</h2>
+        <p class="cta__subtitle">Join thousands of discerning travelers who've chosen TRAVERSE as their trusted companion.</p>
+        <div class="cta__actions">
+          <button class="btn btn--gold">Explore Collection</button>
+          <a href="#" class="cta__secondary">Free Shipping on Orders Over $200</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <nav class="footer__nav" aria-label="Support links">
-        <h4 class="footer__nav-title">Support</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="#">Warranty Claims</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-
-    </div><!-- /.footer__grid -->
-
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p class="footer__copy">&copy; 2024 TRAVERSE Luggage Co. All rights reserved.</p>
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4 class="footer__heading">About TRAVERSE</h4>
+          <p class="footer__text">Premium luggage engineered for the modern traveler. Built to last, designed to inspire.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.338 3.608 1.313.975.975 1.251 2.242 1.313 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.338 2.633-1.313 3.608-.975.975-2.242 1.251-3.608 1.313-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.338-3.608-1.313-.975-.975-1.251-2.242-1.313-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.338-2.633 1.313-3.608.975-.975 2.242-1.251 3.608-1.313 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.717 0 8.283.012 7.028.07 5.773.128 4.6.404 3.604 1.4 2.608 2.396 2.332 3.569 2.274 4.824.216 6.079.204 6.513.204 12s.012 5.921.07 7.176c.058 1.255.334 2.428 1.33 3.424.996.996 2.169 1.272 3.424 1.33 1.255.058 1.689.07 7.176.07s5.921-.012 7.176-.07c1.255-.058 2.428-.334 3.424-1.33.996-.996 1.272-2.169 1.33-3.424.058-1.255.07-1.689.07-7.176s-.012-5.921-.07-7.176c-.058-1.255-.334-2.428-1.33-3.424C21.4.404 20.227.128 18.972.07 17.717.012 17.283 0 12 0z"></path>
+                <circle cx="12" cy="12" r="3.565"></circle>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.953 4.57a10 10 0 002.856-3.515 10.009 10.009 0 01-2.8.856 4.926 4.926 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.924 4.924 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer__col">
+          <h4 class="footer__heading">Shop</h4>
+          <ul class="footer__links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Carry-On Luggage</a></li>
+            <li><a href="#">Checked Luggage</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4 class="footer__heading">Support</h4>
+          <ul class="footer__links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Warranty</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4 class="footer__heading">Newsletter</h4>
+          <p class="footer__text">Get travel tips and exclusive offers delivered to your inbox.</p>
+          <form class="footer__form" aria-label="Newsletter signup">
+            <input 
+              type="email" 
+              placeholder="Your email" 
+              required
+              aria-label="Email address"
+            />
+            <button type="submit" class="btn btn--sm btn--gold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2024 TRAVERSE Premium Luggage. All rights reserved.</p>
         <div class="footer__legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
